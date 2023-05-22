@@ -1,1 +1,41 @@
+package ktth;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
+public class QuanLyKho {
+      private ArrayList<KTTH> msa;
+
+    public QuanLyKho(ArrayList<KTTH> msa) {
+        this.msa = msa;
+    }
+
+    public QuanLyKho() {
+        msa = new ArrayList<>();
+    }
+      public void them_may(KTTH mt) {
+        this.msa.add(mt);
+        System.out.println("Da them thanh cong");
+    }
+
+    public void inThongTin() {
+        for (KTTH maytinh : msa) {
+            System.out.println(maytinh.toString());
+        }
+    }
+
+    public int kiem_tra_so_luong() {
+        return this.msa.size();
+    }
+
+    public void tim_may_anh_theo_ten(String name) {
+        for (KTTH mayTinh : msa) {
+            if (mayTinh.getTenMay().indexOf(name) >= 0) {
+                System.out.println(mayTinh);
+            } 
+        }
+    }
+    public boolean xoa_mot_may(KTTH mt) {
+        return this.msa.remove(mt);
+    }
+}
