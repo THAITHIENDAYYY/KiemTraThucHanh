@@ -1,0 +1,102 @@
+
+package ktth;
+
+public class KTTH  implements Comparable<KTTH> {
+   private String maMay;
+   private int stt;
+   private String tenMay;
+   private String cauHinh;
+    private int giaTien;
+   
+    public KTTH(){
+      
+    }
+    public KTTH (String maMay){
+        this.maMay = maMay;
+    }
+
+   
+
+    public KTTH(String tenMay, int stt, String cauHinh, int giaTien, String maMay) {
+        this.stt = stt;
+        this.tenMay = tenMay;
+        this.cauHinh = cauHinh;
+        this.giaTien = giaTien;
+        this.maMay = maMay;
+    }
+
+    
+   
+    public String getMaMay() {
+        return maMay;
+    }
+
+    public void setMaMay(String maMay) {
+        this.maMay = maMay;
+    }
+
+    public int getStt() {
+        return stt;
+    }
+
+    public void setStt(int stt) {
+        this.stt = stt;
+    }
+
+    public String getTenMay() {
+        return tenMay;
+    }
+
+    public void setTenMay(String tenMay) {
+        this.tenMay = tenMay;
+        
+    }
+
+    public String getCauHinh() {
+        return cauHinh;
+    }
+
+    public void setCauHinh(String cauHinh) {
+        this.cauHinh = cauHinh;
+    }
+
+    public int getGiaTien() {
+        return giaTien;
+    }
+
+    public void setGiaTien(int giaTien) {
+        this.giaTien = giaTien;
+    }
+
+    @Override
+    public String toString() {
+        return "KTTH{" + " Ma May=" + maMay + ", So Thu Tu =" + stt + ", Ten May=" + tenMay + ", Cau Hinh=" + cauHinh + ", Gia Tien=" + giaTien + '}';
+    }
+
+   
+    
+     @Override
+    public int compareTo(KTTH o) {
+        return this.maMay.compareTo(o.maMay);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(obj instanceof KTTH){
+            KTTH another = (KTTH) obj;
+            if(this.maMay.equals(another.maMay)){
+                return true;
+            }
+        }
+        return false;                   
+    }
+
+         @Override
+    public int hashCode() {
+        return maMay.compareTo(maMay);
+    }
+
+    
+
+    
+}
