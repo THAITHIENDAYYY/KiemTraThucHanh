@@ -1,0 +1,38 @@
+
+package ktth;
+import java.util.Objects;
+import java.util.logging.Logger;
+
+
+public class MayGaming  extends KTTH {
+    private  String congviec;
+    
+    public MayGaming(){ 
+    }
+    public MayGaming (String maMay){
+        super(maMay);
+    }
+  public MayGaming(String maMay, String cauHinh, String tenMay, int giaTien, int stt) {
+        super(maMay, cauHinh, tenMay, giaTien, stt);
+          this.congviec = congviec;
+  }
+
+  
+
+    public String getCongviec() {
+        return congviec;
+    }
+
+    public void setCongviec(String congviec) {
+        this.congviec = congviec;
+    }
+
+    @Override
+    public String toString() {
+        return "MayGaming{" + "congviec=" + congviec + '}';
+    }
+
+   
+
+    
+} 
