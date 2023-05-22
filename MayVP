@@ -1,0 +1,31 @@
+
+package ktth;   
+import java.util.Objects;
+
+
+public class MayVP extends KTTH {
+    private  String congViecVP;
+    
+    public MayVP(){ 
+    }
+    public MayVP (String maMay){
+        super(maMay);
+    }
+    public MayVP(String congViecVp, String maMay,int stt, String tenMay, int giaTien, String cauHinh ){
+        super(maMay, stt, tenMay, cauHinh, giaTien  );
+        this.congViecVP = congViecVP;
+    }
+
+    public String getCongViecVP() {
+        return congViecVP;
+    }
+
+    public void setCongViecVP(String congViecVP) {
+        this.congViecVP = congViecVP;
+    }
+
+    @Override
+    public String toString() {
+        return "MayVP{" + "Cong Viec Van Phong =" + congViecVP + '}';
+    }
+}
